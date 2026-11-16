@@ -1,6 +1,7 @@
 # Hardware Debug Anything (HDA)
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![CI](https://github.com/hosseinnosrati/hardware-debug-anything/actions/workflows/ci.yml/badge.svg)](https://github.com/hosseinnosrati/hardware-debug-anything/actions)
 [![MCP](https://img.shields.io/badge/Protocol-Model%20Context%20Protocol-8A2BE2.svg)](https://modelcontextprotocol.io)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-brightgreen.svg)](https://python.org)
 [![Tests](https://img.shields.io/badge/Tests-8%2F8%20Passing-success.svg)](tests/)
