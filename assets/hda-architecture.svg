@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 260" width="100%" height="260">
+  <defs>
+    <linearGradient id="bg_hda" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="rose-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <linearGradient id="purple-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="shadow_hda" x="-5%" y="-10%" width="110%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="880" height="260" rx="16" fill="url(#bg_hda)" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header Banner -->
+  <text x="32" y="38" fill="#fb7185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="16" letter-spacing="1.5">HARDWARE DEBUG ANYTHING (HDA)</text>
+  <text x="32" y="58" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Silicon Diagnostics &amp; Antmicro Renode Virtual Hardware Emulation for AI Agents</text>
+
+  <!-- Stage 1: Hex Dump -->
+  <g transform="translate(32, 80)" filter="url(#shadow_hda)">
+    <rect width="180" height="140" rx="10" fill="#1e293b" stroke="#e11d48" stroke-width="1.2"/>
+    <rect width="180" height="6" rx="3" fill="url(#rose-glow)"/>
+    <text x="14" y="28" fill="#fda4af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="13">1. ARM HardFault Dump</text>
+    <rect x="12" y="44" width="156" height="58" rx="6" fill="#0f172a" stroke="#881337"/>
+    <text x="18" y="60" fill="#f43f5e" font-family="monospace" font-size="9.5">CFSR: 0x00008200</text>
+    <text x="18" y="74" fill="#f43f5e" font-family="monospace" font-size="9.5">HFSR: 0x40000000</text>
+    <text x="18" y="88" fill="#f43f5e" font-family="monospace" font-size="9.5">BFAR: 0x20001004</text>
+    <text x="14" y="122" fill="#fb7185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5">Raw Hex Bitmasks</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 224 150 L 244 150" stroke="#f43f5e" stroke-width="2.5" stroke-dasharray="4,4"/>
+  <polygon points="248,150 242,146 242,154" fill="#f43f5e"/>
+
+  <!-- Stage 2: Bitmask Decoder -->
+  <g transform="translate(254, 80)" filter="url(#shadow_hda)">
+    <rect width="180" height="140" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.2"/>
+    <rect width="180" height="6" rx="3" fill="#f59e0b"/>
+    <text x="14" y="28" fill="#fcd34d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="13">2. Bitmask Decoder</text>
+    <rect x="12" y="44" width="156" height="58" rx="6" fill="#0f172a" stroke="#78350f"/>
+    <text x="18" y="60" fill="#fde68a" font-family="monospace" font-size="9.5">BFSR[1]: PRECISERR</text>
+    <text x="18" y="74" fill="#fde68a" font-family="monospace" font-size="9.5">BFSR[7]: BFARVALID</text>
+    <text x="18" y="88" fill="#4ade80" font-family="monospace" font-size="9.5">Strict 0.001s Decode</text>
+    <text x="14" y="122" fill="#fbbf24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5">Zero AI Hallucination</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 446 150 L 466 150" stroke="#a855f7" stroke-width="2.5" stroke-dasharray="4,4"/>
+  <polygon points="470,150 464,146 464,154" fill="#a855f7"/>
+
+  <!-- Stage 3: Root Cause Triage -->
+  <g transform="translate(476, 80)" filter="url(#shadow_hda)">
+    <rect width="180" height="140" rx="10" fill="#1e293b" stroke="#a855f7" stroke-width="1.2"/>
+    <rect width="180" height="6" rx="3" fill="url(#purple-glow)"/>
+    <text x="14" y="28" fill="#d8b4fe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="13">3. Root-Cause Triage</text>
+    <rect x="12" y="44" width="156" height="58" rx="6" fill="#0f172a" stroke="#581c87"/>
+    <text x="18" y="60" fill="#e9d5ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="9.5">Precise Bus Error</text>
+    <text x="18" y="74" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">Target: DMA Buffer Race</text>
+    <text x="18" y="88" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">Unaligned 32-bit Access</text>
+    <text x="14" y="122" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5">Plain-English Diagnostic</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <path d="M 668 150 L 688 150" stroke="#06b6d4" stroke-width="2.5" stroke-dasharray="4,4"/>
+  <polygon points="692,150 686,146 686,154" fill="#06b6d4"/>
+
+  <!-- Stage 4: Renode Emulation -->
+  <g transform="translate(698, 80)" filter="url(#shadow_hda)">
+    <rect width="150" height="140" rx="10" fill="#1e293b" stroke="#06b6d4" stroke-width="1.5"/>
+    <rect width="150" height="6" rx="3" fill="#06b6d4"/>
+    <text x="12" y="28" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="13">4. Renode Recipe</text>
+    <rect x="10" y="44" width="130" height="58" rx="6" fill="#0f172a" stroke="#0891b2"/>
+    <text x="14" y="60" fill="#a5f3fc" font-family="monospace" font-size="9.5">.resc Emulation</text>
+    <text x="14" y="74" fill="#a5f3fc" font-family="monospace" font-size="9.5">Headless Virtual</text>
+    <text x="14" y="88" fill="#a5f3fc" font-family="monospace" font-size="9.5">CI/CD No-JTAG</text>
+    <text x="12" y="122" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="10.5">Automated Bring-Up</text>
+  </g>
+</svg>

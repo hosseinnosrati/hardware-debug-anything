@@ -11,22 +11,9 @@
 
 ---
 
-```
-                       ┌──────────────────────────────────────────────┐
-                       │   AI Agent (Claude Code / Cursor / Codex)    │
-                       └──────────────────────┬───────────────────────┘
-                                              │ Model Context Protocol (MCP)
-                                              ▼
-┌──────────────────────────────────────────────────────────────────────────────────────────┐
-│                            Hardware Debug Anything (HDA)                                 │
-├──────────────────────────┬───────────────────────────┬───────────────────────────────────┤
-│  1. Silicon Fault Engine │  2. Protocol Diagnostics  │  3. Virtual Silicon Engine        │
-│  - ARM Cortex-M HardFault│  - ESP-IDF Guru Meditation│  - Renode Script Generation       │
-│  - CFSR / HFSR / BFAR    │  - I2C NACK & Pull-Up Rec │  - ARM Vector Table Integrity     │
-│  - BusFault & MemManage  │  - SPI Framing & CPOL     │  - Stack Pointer & Reset Check    │
-│  - UsageFault (DIV0/ALN) │  - UART Baud Auto-Detect  │  - Headless Embedded Test Bench   │
-└──────────────────────────┴───────────────────────────┴───────────────────────────────────┘
-```
+<p align="center">
+  <img src="assets/hda-architecture.svg" alt="Hardware Debug Anything Architecture" width="100%">
+</p>
 
 ---
 
@@ -128,3 +115,4 @@ OK
 Developed under the **Apache-2.0 License**. See [LICENSE](LICENSE) for details.
 
 **Author**: [Hossein Nosrati](https://github.com/hosseinnosrati) &bull; [Portfolio](https://hosseinnosrati.github.io)
+
