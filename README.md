@@ -29,6 +29,17 @@ AI coding agents are proficient at writing high-level C/C++, but they are **deaf
 
 ---
 
+## 🛰️ Satellite & Aerospace Firmware Reliability Application
+
+Once an IoT telemetry satellite or CubeSat is launched into orbit, physical hardware access is permanently impossible. In space, cosmic radiation and Single Event Upsets (SEU) frequently trigger bus faults, invalid peripheral states, or memory pointer corruptions.
+
+**HDA provides ground-truth telemetry verification for satellite transceivers:**
+1. **CMSIS-SVD Pre-Screening**: Validates that telemetry transceiver registers (SPI, DMA, RF PLL prescalers) never write to reserved bits or violate silicon hardware boundaries.
+2. **Automated HardFault Crash Decoding**: Decodes raw ARM Cortex-M `CFSR`, `HFSR`, and `BFAR` hex dumps from ground station telemetry packets into exact offending C lines and memory bus violation causes.
+3. **Zero-Overhead Deterministic Execution**: Operates completely in pure Python without external cloud dependencies or binary bloat.
+
+---
+
 ## Quickstart
 
 ### 1. Run with `uvx`

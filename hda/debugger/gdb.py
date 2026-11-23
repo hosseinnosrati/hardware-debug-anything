@@ -138,3 +138,4 @@ class ArmFaultDecoder:
             pc_address=pc_str,
             suggested_fix=fix or "Check stack alignment and peripheral initialization.",
         )
+

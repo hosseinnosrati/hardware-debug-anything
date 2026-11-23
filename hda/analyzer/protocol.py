@@ -113,3 +113,4 @@ class ProtocolAnalyzer:
             "estimated_raw_baud": round(raw_baud, 1),
             "timing_error_percent": round(error_pct, 2),
         }
+
