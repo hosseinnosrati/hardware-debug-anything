@@ -6,6 +6,7 @@
 [![Python](https://img.shields.io/badge/Python-3.10%2B-brightgreen.svg)](https://python.org)
 [![Tests](https://img.shields.io/badge/Tests-8%2F8%20Passing-success.svg)](tests/)
 [![Architecture](https://img.shields.io/badge/Target-ARM%20Cortex--M%20%7C%20ESP32%20%7C%20RISC--V-orange.svg)](#architecture)
+[![M8ven Trust Index](https://m8ven.ai/badge/mcp/hosseinnosrati/hardware-debug-anything?variant=verified)](https://m8ven.ai/mcp/hosseinnosrati/hardware-debug-anything?s=readme)
 
 > **Autonomous Embedded Systems Debugging & Silicon Diagnostics MCP Server for AI Agents.**  
 > Turn **Claude Code**, **Cursor**, and LLMs into silicon firmware engineers capable of decoding ARM HardFault registers, dissecting ESP32 Guru Meditation panics, diagnosing I2C/SPI bus failures, and running headless virtual hardware tests with Renode.
